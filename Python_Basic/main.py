@@ -41,4 +41,59 @@ weight = 65
 
 bmi = weight / height
 
-print(bmi)
+  print(bmi)
+
+    print("Welcome to Bike Ride")
+    height = int(input("Enter your height \n"))
+    bill = 0
+
+    if height >= 180:
+        print("You are eligible for Ride.")
+        age = int(input("Enter Your Age \n"))
+
+        if age <= 12:
+            bill = 10
+            print("You have to Par 10 Rupees")
+        elif age <= 18:
+            bill = 15
+            print("You Have to Pay 15 Rupees")
+        else:
+            bill = 20
+            print("You Have to pay 20 Rupees")
+
+            wants_Photo = input("If you want a pic then type Y otherwise type N \n")
+            if wants_Photo == "y":
+                bill += 3
+            print(f"Your final bill is {bill}")
+
+    else:
+        print("Sorry you are not eligible.")
+
+    number_check = int(input("Enter Your Number \n"))
+
+    if number_check % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+    print("Welcome to Treasure island")
+    print("Your mission is to fine the Treasure")
+
+    choice1 = input(' Where do you want to go? Type "Left" or "Right"\n').lower()
+    if choice1 == "left":
+        choice2 = input('Middle of lake.Type "Wait" or "swim"\n')
+        if choice2 == "wait":
+            choice3 = input(
+                "You are arrive at the island unharmed. There is house 3 doors. One Red ,one Yellow and One Blue. which color would you choose\n").lower()
+            if choice3 == "red":
+                print("Game Over")
+            elif choice3 == "Yellow":
+                print("You Win")
+            elif choice3 == "Blue":
+                print("Game Over")
+            else:
+                print("Door dont exist")
+        else:
+            print("You got attacked by angry trout, game Over\n")
+    else:
+        print("You fell into a hole.Game over")
