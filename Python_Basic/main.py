@@ -108,3 +108,44 @@ if random_integer == 0:
     print("Head")
 else:
     print("Tail")
+
+
+    # import random
+#
+# friends = ["Ramesh","Suresh","Yogesh","Sukesh","Mukesh"]
+#
+# # 1st option
+# random_index = random.randint(0,4)
+# print(friends[random_index])
+#
+# # 2nd option
+# print(random.choice(friends))
+
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+#
+# dirty_dozon = [fruits,vegetables]
+#
+# print(dirty_dozon[1][1])
+# fruits[-1] = "Melons"
+# fruits.append("Lemons")
+# print(fruits)
+
+import random
+user_choice = int(input("What user choose \n"))
+computer_choice = random.randint(0,2)
+print(f'computer choice {computer_choice}')
+
+if user_choice >= 3 and computer_choice < 0:
+    print("You Won!")
+elif computer_choice == 0 and user_choice == 2:
+    print("You Lose!")
+elif computer_choice > user_choice:
+    print("You Lose!")
+elif user_choice > computer_choice:
+    print("You Win")
+elif computer_choice == user_choice:
+    print("Draw!")
+else:
+    print("Enter valid Number")
