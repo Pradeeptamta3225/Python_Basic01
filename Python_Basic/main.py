@@ -149,3 +149,38 @@ elif computer_choice == user_choice:
     print("Draw!")
 else:
     print("Enter valid Number")
+
+
+
+
+# Password Generator 
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+symbols = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+print("Welocome to the password generator! \n")
+nr_letters = int(input("How many letter password do u want? \n"))
+nr_symbols = int(input("How many symbol password do u want? \n"))
+nr_numbers = int(input("How many number password do u want? \n"))
+
+
+password_list = []
+for char in range(0,nr_letters):
+    password_list += random.choice(letters)
+
+for char in range(0,nr_numbers):
+    password_list += random.choice(numbers)
+
+for char in range(0, nr_symbols):
+    password_list += random.choice(symbols)
+
+# print(password_list)
+random.shuffle(password_list)
+# print(password_list)
+
+password = ""
+for char in password_list:
+     password += char
+
+print(f"Your Password is :{password}")
